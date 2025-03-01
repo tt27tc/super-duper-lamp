@@ -44,8 +44,8 @@
 </head>
 <body>
 
-    <!-- Hidden Audio Element -->
-    <audio id="birthdaySong" src="https://docs.google.com/uc?export=download&id=1_POYWD3zA-W7zOcw7cdw2mv5cbnje0PN"></audio>
+    <!-- Audio Player (Hidden) -->
+    <audio id="birthdaySong" src="https://github.com/tt27tc/super-duper-lamp/tree/main/assets/music"></audio>
 
     <div id="question1" class="question">
         <h2>In year 2025, is the time rewinded right now at this moment and... today is February 19?</h2>
@@ -71,38 +71,20 @@
         
         <button onclick="showSurprise()"> Surprise? </button>
         <p class="hidden-surprise" style="display: none;"> I hope you know that you are still my best, best friend. <br>Best leader. Best empath girl. Best cousin... <br>My best someone.</p>
-        
-        <pre class="ascii-art">
-                      ⠀⢀⡀⠀⠀
-            ⢀⣾⡟⠒⢄⠀⠀⠀⡠⠊⣠⠔⠈⠉⢯⣂
-            ⣾⡵⠛⠿⣭⣑⣄⣀⣠⣾⠎⠠⠠⠤⠜⡿
-            ⠎⠓⠤⣤⢿⡿⠋⢹⠻⡹⠣⠤⠀⠠⢸⠃
-            ⠘⢀⣀⠰⠓⡍⢠⠀⠈⡀⠀⠢⣏⠀⠈⠁⠀
-            ⠀⠀⠀⡀⠸⠁⢀⠀⠀⠀⢀⠀⠈⡄⠀⠀⠀
-            ⠀⠀⠀⢠⡄⠀⠈⠀⠀⠀⠀⠑⡀⣿⡀⠀⠀
-            ⠀⠀⠀⠘⡇⠀⠀⠀⠀⠀⠀⠀⢈⠝⠇⠀⠀
-            ⠀⠀⠀⠀⠃⢀⠌⠀⠀⠀⠀⠀⠘⡘⡄⠀⠀
-            ⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⣶⠂⡇⠀⠀
-            ⠀⠀⡔⢀⠀⠀⠀⠀⠀⠀⢰⠃⢀⡇⠀⠀
-            ⠀⠌⠀⣴⠀⠀⠀⠀⠀⠀⡶⠀⡸⠁⠀⠀
-            ⠸⠀⢠⠻⠀⠀⠀⠀⠀⣰⡁⡰⠁⠀⠀⠀
-            ⡇⠀⠆⡈⠀⠀⠀⠀⢀⣿⠕⠀⠀⠀⠀⠀
-            ⢠⠁⡐⢀⡇⠀⠀⠀⠀⢈⢻⠀⠀⠀⠀⠀⠀
-            ⠘⡅⢩⣾⠁⠀⠀⠀⡠⠁⠊⠀⠀⠀⠀⠀⠀
-            ⠇⠘⠏⠀⠀⠀⡰⢁⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠘⡀⠀⠀⠀⢐⠃⢸⠀⢸⠀⠀⠀⠀⠀⠀
-            ⠀⠑⡀⠀⠀⢸⠀⠘⡀⢸⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠠⠀⠀⠈⢿⣇⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠣⠀⠀⠀⠉⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠁⡀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠀
-        </pre>
     </div>
 
     <script>
         function playSong() {
             let song = document.getElementById("birthdaySong");
+
+            // Start playing from 48 seconds
+            song.currentTime = 48;
             song.play();
+
+            // Stop at 1:40 (100 seconds)
+            setTimeout(() => {
+                song.pause();
+            }, 52000); // 100s - 48s = 52,000ms
         }
 
         function nextQuestion() {
