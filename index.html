@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
+    <title>Dearest</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
             text-align: center;
-            background-color: #ffe6f2;
-            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+            background-color: lightpink;
+            font-family: "", cursive;
         }
         .image-space {
     display: flex;
@@ -19,7 +19,7 @@
 }
 
 .image-space img {
-    max-width: 50%; /* Limits image width to 80% of the container */
+    max-width: 40%; /* Limits image width to 80% of the container */
     height: auto;  /* Maintains aspect ratio */
     border-radius: 10px; /* Optional rounded corners */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
@@ -30,13 +30,13 @@
             margin: auto;
             padding: 20px;
             max-width: 600px;
-            background: white;
+            background: rgb(249, 224, 224);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .question {
             margin-top: 20%;
-            background: white;
+            background: rgba(255, 255, 255, 0.533);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -54,25 +54,28 @@
         button:hover {
             background-color: #ff3385;
         }
+
     </style>
+
 </head>
 <body>
+
 
     <!-- Audio Player (Hidden) -->
     <audio id="birthdaySong" src="https://github.com/tt27tc/super-duper-lamp/blob/main/assets/music/YDAO.mp3"></audio>
 
     <div id="question1" class="question">
-        <h2>In year 2025, is the time rewinded right now at this moment and... today is February 19?</h2>
+        <h2>In the fateful <br>two decades and 25 years, <br>hath the sands of time<br> been turned upon themselves? <br>Doth this very moment...<br> mark the return <br>to the 19th day <br>of February?</h2>
         <button onclick="playSong(); nextQuestion();">Yes</button>
     </div>
     
     <div id="question2" class="question" style="display: none;">
-        <h2>So, you're 18?</h2>
+        <h2>Hmm... Did you play the song?</h2>
         <button onclick="showIntro()">Yes</button>
     </div>
 
     <div id="intro" class="question" style="display: none;">
-        <h2>For Chloe...</h2>
+        <h2>Oh, Chloe...</h2>
         <button onclick="showBirthdayPage()">꒰ა ♡ ໒꒱</button>
     </div>
 
@@ -80,12 +83,19 @@
         <div class="image-space">
             <img src="file:///Users/macsierra/Downloads/Chloe.png" alt="Chloe Chibi style">
         </div>
-
-        <h2 class="pink-text"> Dear you... </h2>
         
-        <button onclick="showSurprise()"> Surprise? </button>
-        <p class="hidden-surprise" style="display: none;"> I hope you know that you are still my <br>best, <br> best friend. <br>Best leader. <br>Best empath girl. <br>Best cousin... <br>My best someone.</p>
+
+        <h2 class="pink-text"> Dear you, </h2>
+        
+        <button onclick="showSurprise()"> 𓃹 </button>
+        <p class="hidden-surprise" style="display: none;"> I hope you know <br>that you are still my best, <br> best friend. <br>Best of them all. <br>Best leader.<br>Best empath girl. <br>Best cousin... <br>My best someone.
+            <br>And most especially, of course, <br>our best cry baby. 
+    <br>Know that I am one of the proudest <br> of how far you've come... <br> for you are so well loved by many.  <br> It fills me with glee.  <br> Nothing but the absolute best  <br> is all that I wish for you and Thea.  <br>And thank you for sharing me  <br> a piece of your warmth from your heart <br> to mine, <br> that is withering almost <br> but not apart. <br> Chloe,  <br> I love you,  <br>as they say  <br>
+    but to me  <br> it's forever and a day. </p>
+
+    
     </div>
+    
 
     <script>
         function playSong() {
@@ -121,7 +131,7 @@
         }
     </script>
     
-<<audio id="birthdaySong" controls>
+<audio id="birthdaySong" controls>
     <source src="https://www.dropbox.com/scl/fi/nqs6tohggzhbib0yg3m0v/YDAO.mp3?rlkey=r3tqrzat1iqdflgrnii3uzevx&raw=1" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
