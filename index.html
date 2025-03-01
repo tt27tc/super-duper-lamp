@@ -3,79 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday! </title>
+    <title>Happy Birthday!</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffe6f2;
+            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+        }
+        .container {
+            display: none;
+            margin: auto;
+            padding: 20px;
+            max-width: 600px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-top: 20%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #ff3385;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Hidden Audio Element -->
+    <audio id="birthdaySong" src="https://docs.google.com/uc?export=download&id=1_POYWD3zA-W7zOcw7cdw2mv5cbnje0PN"></audio>
+
+    <div id="question1" class="question">
+        <h2>In year 2025, is the time rewinded right now at this moment and... today is February 19?</h2>
+        <button onclick="playSong(); nextQuestion();">Yes</button>
+    </div>
     
-    <!-- Container for all content -->
-    <div class="container">
-        <h1 class="header-text"> 𝒽𝒶𝓅𝓅𝓎 𝒷𝒾𝓇𝓉𝒽𝒹𝒶𝓎 </h1>
+    <div id="question2" class="question" style="display: none;">
+        <h2>So, you're 18?</h2>
+        <button onclick="showIntro()">Yes</button>
+    </div>
 
-        <!-- Kaomoji Welcome -->
-        <pre class="kaomoji">
-♡ ∩_∩ 
- („• ֊ •„)♡
-|￣￣￣￣￣￣￣￣￣￣U U￣￣￣￣￣￣￣￣￣￣|
-|             Dearest Chloe          | 
-￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 
-        </pre>
+    <div id="intro" class="question" style="display: none;">
+        <h2>For Chloe...</h2>
+        <button onclick="showBirthdayPage()">꒰ა ♡ ໒꒱</button>
+    </div>
 
-        <!-- Space for Birthday Image -->
+    <div id="birthdayPage" class="container">
         <div class="image-space">
             <p> Your image can go here </p>
-            <!-- Example: <img src="your-image.jpg" alt="Birthday Image"> -->
         </div>
 
         <h2 class="pink-text"> Dear you... </h2>
-        <p>I hope you know that you are still my best, best friend. <br>Best leader. Best empath girl. Best cousin... <br>My best someone.
-        </p>
-
-        <button onclick="showSurprise()"> Click Me</button>
-        <p class="hidden-surprise">(✿◕‿◕) You are special! Keep smiling! </p>
-
-        <h2 class="pink-text"> Top 3 Memoirs </h2>
-        <ul class="birthday-list">
-            <li>First... Do you remember when the world hated us because of listening to different doctrines? We almost found ourselves on the streets, forsaken. Though we were suffering <b>together</b>.</li>
-            <li>Your birth month flower is **as unique as you are**! </li>
-            <li>Studies say people who celebrate more birthdays live longer! </li>
-        </ul>
-
-        <!-- More ASCII Art -->
+        
+        <button onclick="showSurprise()"> Surprise? </button>
+        <p class="hidden-surprise" style="display: none;"> I hope you know that you are still my best, best friend. <br>Best leader. Best empath girl. Best cousin... <br>My best someone.</p>
+        
         <pre class="ascii-art">
-⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀
-⢀⣾⡟⠒⢄⠀⠀⠀⡠⠊⣠⠔⠈⠉⢯⣂
-⣾⡵⠛⠿⣭⣑⣄⣀⣠⣾⠎⠠⠠⠤⠜⡿
-⠎⠓⠤⣤⢿⡿⠋⢹⠻⡹⠣⠤⠀⠠⢸⠃
-⠘⢀⣀⠰⠓⡍⢠⠀⠈⡀⠀⠢⣏⠀⠈⠁⠀
-⠀⠀⠀⡀⠸⠁⢀⠀⠀⠀⢀⠀⠈⡄⠀⠀⠀
-⠀⠀⠀⢠⡄⠀⠈⠀⠀⠀⠀⠑⡀⣿⡀⠀⠀
-⠀⠀⠀⠘⡇⠀⠀⠀⠀⠀⠀⠀⢈⠝⠇⠀⠀
-⠀⠀⠀⠀⠃⢀⠌⠀⠀⠀⠀⠀⠘⡘⡄⠀⠀
-⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⣶⠂⡇⠀⠀
-⠀⠀⡔⢀⠀⠀⠀⠀⠀⠀⢰⠃⢀⡇⠀⠀
-⠀⠌⠀⣴⠀⠀⠀⠀⠀⠀⡶⠀⡸⠁⠀⠀
-⠸⠀⢠⠻⠀⠀⠀⠀⠀⣰⡁⡰⠁⠀⠀⠀
-⡇⠀⠆⡈⠀⠀⠀⠀⢀⣿⠕⠀⠀⠀⠀⠀
-⢠⠁⡐⢀⡇⠀⠀⠀⠀⢈⢻⠀⠀⠀⠀⠀⠀
-⠘⡅⢩⣾⠁⠀⠀⠀⡠⠁⠊⠀⠀⠀⠀⠀⠀
-⠇⠘⠏⠀⠀⠀⡰⢁⠀⠀⠀⠀⠀⠀⠀⠀
-⠘⡀⠀⠀⠀⢐⠃⢸⠀⢸⠀⠀⠀⠀⠀⠀
-⠀⠑⡀⠀⠀⢸⠀⠘⡀⢸⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠠⠀⠀⠈⢿⣇⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠣⠀⠀⠀⠉⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠁⡀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠀
+                      ⠀⢀⡀⠀⠀
+            ⢀⣾⡟⠒⢄⠀⠀⠀⡠⠊⣠⠔⠈⠉⢯⣂
+            ⣾⡵⠛⠿⣭⣑⣄⣀⣠⣾⠎⠠⠠⠤⠜⡿
+            ⠎⠓⠤⣤⢿⡿⠋⢹⠻⡹⠣⠤⠀⠠⢸⠃
+            ⠘⢀⣀⠰⠓⡍⢠⠀⠈⡀⠀⠢⣏⠀⠈⠁⠀
+            ⠀⠀⠀⡀⠸⠁⢀⠀⠀⠀⢀⠀⠈⡄⠀⠀⠀
+            ⠀⠀⠀⢠⡄⠀⠈⠀⠀⠀⠀⠑⡀⣿⡀⠀⠀
+            ⠀⠀⠀⠘⡇⠀⠀⠀⠀⠀⠀⠀⢈⠝⠇⠀⠀
+            ⠀⠀⠀⠀⠃⢀⠌⠀⠀⠀⠀⠀⠘⡘⡄⠀⠀
+            ⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⣶⠂⡇⠀⠀
+            ⠀⠀⡔⢀⠀⠀⠀⠀⠀⠀⢰⠃⢀⡇⠀⠀
+            ⠀⠌⠀⣴⠀⠀⠀⠀⠀⠀⡶⠀⡸⠁⠀⠀
+            ⠸⠀⢠⠻⠀⠀⠀⠀⠀⣰⡁⡰⠁⠀⠀⠀
+            ⡇⠀⠆⡈⠀⠀⠀⠀⢀⣿⠕⠀⠀⠀⠀⠀
+            ⢠⠁⡐⢀⡇⠀⠀⠀⠀⢈⢻⠀⠀⠀⠀⠀⠀
+            ⠘⡅⢩⣾⠁⠀⠀⠀⡠⠁⠊⠀⠀⠀⠀⠀⠀
+            ⠇⠘⠏⠀⠀⠀⡰⢁⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠘⡀⠀⠀⠀⢐⠃⢸⠀⢸⠀⠀⠀⠀⠀⠀
+            ⠀⠑⡀⠀⠀⢸⠀⠘⡀⢸⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠠⠀⠀⠈⢿⣇⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠣⠀⠀⠀⠉⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠁⡀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠀
         </pre>
-
-        <h2 class="grey-text">Useful Links</h2>
-        <ul>
-            <li><a href="https://www.dhvsu.edu.ph" target="_blank">Click to visit a special site 🎀</a></li>
-            <li><a href="#top">Back to Top</a></li>
-        </ul>
     </div>
 
     <script>
+        function playSong() {
+            let song = document.getElementById("birthdaySong");
+            song.play();
+        }
+
+        function nextQuestion() {
+            document.getElementById('question1').style.display = 'none';
+            document.getElementById('question2').style.display = 'block';
+        }
+
+        function showIntro() {
+            document.getElementById('question2').style.display = 'none';
+            document.getElementById('intro').style.display = 'block';
+        }
+
+        function showBirthdayPage() {
+            document.getElementById('intro').style.display = 'none';
+            document.getElementById('birthdayPage').style.display = 'block';
+        }
+
         function showSurprise() {
             document.querySelector('.hidden-surprise').style.display = 'block';
         }
