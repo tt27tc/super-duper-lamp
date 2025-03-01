@@ -1,0 +1,104 @@
+/* Add background image */
+body {
+    background-image: url('your-background.jpg'); /* Change this to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Georgia', georgia;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+/* Main container for content */
+.container {
+    background-color: rgba(255, 201, 201, 0.438); /* Soft pink with slight transparency */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgb(248, 182, 182);
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Heading text */
+.header-text {
+    color: rgb(218, 45, 140);
+    font-size: 36px;
+    animation: bounce 1s infinite alternate;
+}
+
+/* Kaomoji style */
+.kaomoji {
+    font-size: 24px;
+    color: rgb(214, 79, 146);
+}
+
+/* Space for the image */
+.image-space {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 182, 193, 0.5); /* Light pink placeholder */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+/* Pink text for titles */
+.pink-text {
+    color: rgb(196, 11, 156);
+    font-size: 24px;
+}
+
+/* Grey text */
+.grey-text {
+    color: rgb(93, 93, 93);
+    font-size: 20px;
+}
+
+/* Fun fact list */
+.birthday-list {
+    list-style-type: "❀ ";
+    text-align: left;
+    display: inline-block;
+}
+
+/* Button */
+button {
+    background-color: #ff69b4;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+/* Hidden surprise text */
+.hidden-surprise {
+    display: none;
+    font-size: 22px;
+    color: #ff69b4;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* ASCII art styling */
+.ascii-art {
+    font-size: 16px;
+    color: rgb(255, 20, 147);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+/* Bounce effect for heading */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
