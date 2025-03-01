@@ -11,6 +11,20 @@
             background-color: #ffe6f2;
             font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
         }
+        .image-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-space img {
+    max-width: 50%; /* Limits image width to 80% of the container */
+    height: auto;  /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
         .container {
             display: none;
             margin: auto;
@@ -45,7 +59,7 @@
 <body>
 
     <!-- Audio Player (Hidden) -->
-    <audio id="birthdaySong" src="https://tt27tc.github.io/super-duper-lamp/assets/music/You%20Deserve%20an%20Oscar.mp3.mp3"></audio>
+    <audio id="birthdaySong" src="https://github.com/tt27tc/super-duper-lamp/blob/main/assets/music/YDAO.mp3"></audio>
 
     <div id="question1" class="question">
         <h2>In year 2025, is the time rewinded right now at this moment and... today is February 19?</h2>
@@ -64,13 +78,13 @@
 
     <div id="birthdayPage" class="container">
         <div class="image-space">
-            <p> Your image can go here </p>
+            <img src="file:///Users/macsierra/Downloads/Chloe.png" alt="Chloe Chibi style">
         </div>
 
         <h2 class="pink-text"> Dear you... </h2>
         
         <button onclick="showSurprise()"> Surprise? </button>
-        <p class="hidden-surprise" style="display: none;"> I hope you know that you are still my best, best friend. <br>Best leader. Best empath girl. Best cousin... <br>My best someone.</p>
+        <p class="hidden-surprise" style="display: none;"> I hope you know that you are still my <br>best, <br> best friend. <br>Best leader. <br>Best empath girl. <br>Best cousin... <br>My best someone.</p>
     </div>
 
     <script>
@@ -106,6 +120,31 @@
             document.querySelector('.hidden-surprise').style.display = 'block';
         }
     </script>
+    
+<<audio id="birthdaySong" controls>
+    <source src="https://www.dropbox.com/scl/fi/nqs6tohggzhbib0yg3m0v/YDAO.mp3?rlkey=r3tqrzat1iqdflgrnii3uzevx&raw=1" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("birthdaySong");
+
+        // Set start time when user clicks play
+        audio.addEventListener("play", function () {
+            audio.currentTime = 48; // Start at 00:48
+        });
+
+        // Stop audio at 1:40
+        audio.addEventListener("timeupdate", function () {
+            if (audio.currentTime >= 100) { // 1:40 is 100 seconds
+                audio.pause();
+            }
+        });
+    });
+</script>
+
+
 
 </body>
 </html>
